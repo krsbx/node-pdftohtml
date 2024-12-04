@@ -1,14 +1,27 @@
 {
   "name": "node-pdftohtml",
-  "module": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "types": "dist/types/index.d.ts",
+  "module": "dist/esm/index.js",
   "type": "module",
+  "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
-    "build": "bun run src/index.ts",
+    "build": "npx tsx build.ts",
+    "typecheck": "npx tsc --project tsconfig.json --noEmit",
     "watch": "bun run --watch src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/node": "latest",
+    "esbuild": "^0.24.0",
+    "glob": "^11.0.0",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.2",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@rushstack/ts-command-line": "^4.23.1",
+    "pdftohtmljs": "^0.6.0"
   }
 }
