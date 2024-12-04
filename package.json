@@ -6,6 +6,7 @@
   "type": "module",
   "version": "0.1.0",
   "license": "MIT",
+  "bin": "./dist/cjs/index.js",
   "scripts": {
     "build": "npx tsx build.ts",
     "typecheck": "npx tsc --project tsconfig.json --noEmit",
